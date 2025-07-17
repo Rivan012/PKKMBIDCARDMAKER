@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit 2025 Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div id="card-design">
+            <div class="photo-frame">
+                <div id="zoom-wrapper"> 
+                    <img id="photo-preview" src="https://via.placeholder.com/400x500.png?text=Pilih+Foto" alt="User Photo">
+                </div>
+            </div>
+
+            <div id="name-display" class="text-box">NAMA LENGKAP</div>
+            <div id="field-display" class="text-box">BIDANG</div>
+        </div>
+
+        <div class="form-container">
+            <h2>Buat Kartu Anda</h2>
+            <p>Isi formulir untuk memperbarui kartu secara otomatis.</p>
+            
+            <label for="name-input">Nama Lengkap:</label>
+            <input type="text" id="name-input" placeholder="Masukkan nama Anda...">
+            
+            <label for="field-input">Bidang:</label>
+            <select name="field-input" id="field-input">
+                <option>Pilih</option>
+                <option value="PUBDEKDOK">PDD</option>
+                <option value="KONSUMSI">Konsumsi</option>
+                <option value="KESEHATAN">Kesehatan</option>
+                <option value="KEAMANAN">Keamanan</option>
+                <option value="PK">PK</option>
+                <option value="ACARA">Acara</option>
+                <option value="DANUS">Danus</option>
+                <option value="HUMAS">Humas</option>
+                <option value="KETUA PELAKSANA">KETUA PELAKSANA</option>
+                <option value="SEKRETARIS PELAKSANA">SEKRETARIS PELAKSANA</option>
+                <option value="BENDAHARA PELAKSANA">BENDAHARA PELAKSANA</option>
+            </select>
+            
+            <label for="photo-input">Unggah Foto Profil:</label>
+            <input type="file" id="photo-input" accept="image/*">
+            
+            <label for="x-pos-slider">Posisi Kiri/Kanan:</label>
+            <input type="range" id="x-pos-slider" min="0" max="100" value="50" step="1">
+
+            <label for="y-pos-slider">Posisi Atas/Bawah:</label>
+            <input type="range" id="y-pos-slider" min="0" max="100" value="50" step="1">
+            
+            <label for="zoom-slider">Perbesar/Perkecil (Zoom):</label>
+            <input type="range" id="zoom-slider" min="1" max="3" value="1" step="0.1">
+            
+            <button id="download-btn">Unduh Kartu</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
