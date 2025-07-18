@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orbit 2025 Card Generator</title>
+    <title>ID Card Generator</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
@@ -13,7 +14,7 @@
         <div id="card-design">
             <div class="photo-frame">
                 <div id="zoom-wrapper"> 
-                    <img id="photo-preview" src="https://via.placeholder.com/400x500.png?text=Pilih+Foto" alt="User Photo">
+                    <img id="photo-preview" src="https://via.placeholder.com/180x225.png?text=Pilih+Foto" alt="User Photo">
                 </div>
             </div>
 
@@ -29,7 +30,7 @@
             <input type="text" id="name-input" placeholder="Masukkan nama Anda...">
             
             <label for="field-input">Bidang:</label>
-            <select name="field-input" id="field-input">
+            <select id="field-input">
                 <option>Pilih</option>
                 <option value="PUBDEKDOK">PDD</option>
                 <option value="KONSUMSI">Konsumsi</option>
@@ -39,8 +40,6 @@
                 <option value="ACARA">Acara</option>
                 <option value="DANUS">Danus</option>
                 <option value="HUMAS">Humas</option>
-                <option value="KESEKRETARIATAN">Kestari</option>
-                <option value="PERLENGKAPAN">Perlengkapan</option>
                 <option value="KETUA PELAKSANA">KETUA PELAKSANA</option>
                 <option value="SEKRETARIS PELAKSANA">SEKRETARIS PELAKSANA</option>
                 <option value="BENDAHARA PELAKSANA">BENDAHARA PELAKSANA</option>
@@ -58,7 +57,7 @@
             <label for="zoom-slider">Perbesar/Perkecil (Zoom):</label>
             <input type="range" id="zoom-slider" min="1" max="3" value="1" step="0.1">
             
-            <button id="download-btn">Unduh Kartu</button>
+            <button id="download-btn">Unduh Kartu (PDF)</button>
         </div>
     </div>
 
